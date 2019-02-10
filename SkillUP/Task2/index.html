@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+</head>
+<body>
+	<script>
+		    function Result() {
+      var x1 = document.getElementById("x1").value;
+      var sign = document.getElementById("sign").value;
+      var x2 = document.getElementById("x2").value;
+      
+      	if(sign == 1){
+      		value = x1 * x2;
+      	} else if (sign == 2) {
+      		value = x1 / x2;
+      	} else if (sign == 3) {
+      		value = +x1 + +x2;
+      	} else if (sign == 4) {
+      		value = x1 - x2;
+      	} else if (sign == 5) {
+      		value = Math.pow(x1,x2);
+      	}
+
+      	document.getElementById('value').value = value;
+	}
+	</script>
+
+	<h1>Simple Calculator</h1>
+	<input type="number" required id="x1" placeholder="Input first number" >
+	<select id="sign">
+		<option value="1">x</option>
+		<option value="2">:</option>
+		<option value="3">+</option>
+		<option value="4">-</option>
+		<option value="5">^</option>
+	</select>
+	<input type="number" required id="x2" placeholder="Input second number">
+	<input type="button" onclick="Result()" value="Calculate"><br><br>
+	Result = <input id="value" required autocomplete="off">
+</body>
+</html>
